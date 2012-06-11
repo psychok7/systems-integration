@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista marca="HP">
+	<modelo nome="HP Pavilion g6-1215sp (Cinzento Carvão)">
+		<ecra>15.6</ecra>
+		<processador>AMD Fusion APU A4-3300 Dual Core</processador>
+		<frequenciaprocessador unidade="GHz">1.9</frequenciaprocessador>
+		<memoriaram unidade="GiB">6</memoriaram>
+		<disco unidade="GiB">750</disco>
+		<peso unidade="Kg">2.55</peso>
+		<autonomia unidade="horas">N/A</autonomia>
+		<preco>499</preco>
+	</modelo>
+	<modelo nome="HP Pavilion dv6-6080ep">
+		<ecra>15.6</ecra>
+		<processador>Intel Core i5-2410M Dual Core (Sandy Bridge)</processador>
+		<frequenciaprocessador unidade="GHz">2.3</frequenciaprocessador>
+		<memoriaram unidade="GiB">4</memoriaram>
+		<disco unidade="GiB">500</disco>
+		<peso unidade="Kg">2.91</peso>
+		<autonomia unidade="horas">N/A</autonomia>
+		<preco>649</preco>
+	</modelo>
+	<modelo nome="HP Pavilion dv7-6150sp">
+		<ecra>17.3</ecra>
+		<processador>Intel Core i5-2410M Dual Core (Sandy Bridge)</processador>
+		<frequenciaprocessador unidade="GHz">2.3</frequenciaprocessador>
+		<memoriaram unidade="GiB">8</memoriaram>
+		<disco unidade="GiB">500</disco>
+		<peso unidade="Kg">3</peso>
+		<autonomia unidade="horas">N/A</autonomia>
+		<preco>899</preco>
+	</modelo>
+	<modelo nome="HP Pavilion dv7-6b20ep (Castanho)">
+		<ecra>17.3</ecra>
+		<processador>Intel Core i7-2670QM Quad Core (Sandy Bridge)</processador>
+		<frequenciaprocessador unidade="GHz">2.2</frequenciaprocessador>
+		<memoriaram unidade="GiB">8</memoriaram>
+		<disco unidade="GiB">750</disco>
+		<peso unidade="Kg">3.43</peso>
+		<autonomia unidade="horas">N/A</autonomia>
+		<preco>1199</preco>
+	</modelo>
+	<modelo nome="HP Envy 17-2120ep 3D (Carbono Relíquia)">
+		<ecra>17.3</ecra>
+		<processador>Intel Core i7-2630QM Quad Core (Sandy Bridge)</processador>
+		<frequenciaprocessador unidade="GHz">2</frequenciaprocessador>
+		<memoriaram unidade="GiB">8</memoriaram>
+		<disco unidade="TiB">1</disco>
+		<peso unidade="Kg">3.41</peso>
+		<autonomia unidade="horas">N/A</autonomia>
+		<preco>1799</preco>
+	</modelo>
+</lista>
+
+	

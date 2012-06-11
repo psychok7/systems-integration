@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name='UserWSService' targetNamespace='http://webservices/' xmlns='http://schemas.xmlsoap.org/wsdl/' xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' xmlns:tns='http://webservices/' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+ <types>
+  <xs:schema targetNamespace='http://webservices/' version='1.0' xmlns:tns='http://webservices/' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+   <xs:element name='Exception' type='tns:Exception'/>
+   <xs:element name='loginWS' type='tns:loginWS'/>
+   <xs:element name='loginWSResponse' type='tns:loginWSResponse'/>
+   <xs:element name='registerWS' type='tns:registerWS'/>
+   <xs:element name='registerWSResponse' type='tns:registerWSResponse'/>
+   <xs:complexType name='loginWS'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='arg0' type='xs:string'/>
+     <xs:element minOccurs='0' name='arg1' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='loginWSResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='Exception'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='message' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='registerWS'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='arg0' type='xs:string'/>
+     <xs:element minOccurs='0' name='arg1' type='xs:string'/>
+     <xs:element minOccurs='0' name='arg2' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='registerWSResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+  </xs:schema>
+ </types>
+ <message name='UserWS_loginWS'>
+  <part element='tns:loginWS' name='loginWS'/>
+ </message>
+ <message name='UserWS_loginWSResponse'>
+  <part element='tns:loginWSResponse' name='loginWSResponse'/>
+ </message>
+ <message name='Exception'>
+  <part element='tns:Exception' name='Exception'/>
+ </message>
+ <message name='UserWS_registerWS'>
+  <part element='tns:registerWS' name='registerWS'/>
+ </message>
+ <message name='UserWS_registerWSResponse'>
+  <part element='tns:registerWSResponse' name='registerWSResponse'/>
+ </message>
+ <portType name='UserWS'>
+  <operation name='loginWS' parameterOrder='loginWS'>
+   <input message='tns:UserWS_loginWS'/>
+   <output message='tns:UserWS_loginWSResponse'/>
+   <fault message='tns:Exception' name='Exception'/>
+  </operation>
+  <operation name='registerWS' parameterOrder='registerWS'>
+   <input message='tns:UserWS_registerWS'/>
+   <output message='tns:UserWS_registerWSResponse'/>
+   <fault message='tns:Exception' name='Exception'/>
+  </operation>
+ </portType>
+ <binding name='UserWSBinding' type='tns:UserWS'>
+  <soap:binding style='document' transport='http://schemas.xmlsoap.org/soap/http'/>
+  <operation name='loginWS'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+   <fault name='Exception'>
+    <soap:fault name='Exception' use='literal'/>
+   </fault>
+  </operation>
+  <operation name='registerWS'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+   <fault name='Exception'>
+    <soap:fault name='Exception' use='literal'/>
+   </fault>
+  </operation>
+ </binding>
+ <service name='UserWSService'>
+  <port binding='tns:UserWSBinding' name='UserWSPort'>
+   <soap:address location='REPLACE_WITH_ACTUAL_URL'/>
+  </port>
+ </service>
+</definitions>

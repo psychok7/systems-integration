@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista marca="Apple">
+	<modelo nome="Apple MacBook Pro 13'' Core i5 2,4GHz (MD313)">
+		<ecra>13.3</ecra>
+		<processador>Intel Core i5 Dual Core</processador>
+		<frequenciaprocessador unidade="GHz">2.4</frequenciaprocessador>
+		<memoriaram unidade="GiB">4</memoriaram>
+		<disco unidade="GiB">500</disco>
+		<peso unidade="Kg">2.04</peso>
+		<autonomia unidade="horas">7</autonomia>
+		<preco>1199</preco>
+	</modelo>
+	<modelo nome="Apple MacBook Air 11'' 128GB (MC969-i7)">
+		<ecra>11.6</ecra>
+		<processador>Intel Core i7 Dual Core (Sandy Bridge)</processador>
+		<frequenciaprocessador unidade="GHz">1.8</frequenciaprocessador>
+		<memoriaram unidade="GiB">4</memoriaram>
+		<disco unidade="GiB">128</disco>
+		<peso unidade="Kg">1.08</peso>
+		<autonomia unidade="horas">5</autonomia>
+		<preco>1179</preco>
+	</modelo>
+	<modelo nome="Apple MacBook Pro 13'' Core i5 2,4GHz (MD313-750GB)">
+		<ecra>13.3</ecra>
+		<processador>Intel Core i5 Dual Core</processador>
+		<frequenciaprocessador unidade="GHz">2.4</frequenciaprocessador>
+		<memoriaram unidade="GiB">4</memoriaram>
+		<disco unidade="GiB">750</disco>
+		<peso unidade="Kg">2.04</peso>
+		<autonomia unidade="horas">7</autonomia>
+		<preco>1219</preco>
+	</modelo>
+	<modelo nome="Apple MacBook Pro 15'' Core i7 2,2GHz (MD318)">
+		<ecra>15.4</ecra>
+		<processador>Intel Core i7 Quad Core</processador>
+		<frequenciaprocessador unidade="GHz">2.2</frequenciaprocessador>
+		<memoriaram unidade="GiB">4</memoriaram>
+		<disco unidade="GiB">500</disco>
+		<peso unidade="Kg">2.04</peso>
+		<autonomia unidade="horas">7</autonomia>
+		<preco>1799</preco>
+	</modelo>
+	<modelo nome="Apple MacBook Pro 17'' Core i7 2,4GHz (MD311)">
+		<ecra>17</ecra>
+		<processador>Intel Core i7 Quad Core</processador>
+		<frequenciaprocessador unidade="GHz">2.4</frequenciaprocessador>
+		<memoriaram unidade="GiB">4</memoriaram>
+		<disco unidade="GiB">750</disco>
+		<peso unidade="Kg">2.99</peso>
+		<autonomia unidade="horas">7</autonomia>
+		<preco>2499</preco>
+	</modelo>
+</lista>
+
+	

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>PhasebookWS2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <display-name>UserWS2</display-name>
+    <servlet-name>UserWS2</servlet-name>
+    <servlet-class>webservices2.UserWS2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserWS2</servlet-name>
+    <url-pattern>/UserWS2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>PostWS2</display-name>
+    <servlet-name>PostWS2</servlet-name>
+    <servlet-class>webservices2.PostWS2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PostWS2</servlet-name>
+    <url-pattern>/PostWS2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>FriendsWS2</display-name>
+    <servlet-name>FriendsWS2</servlet-name>
+    <servlet-class>webservices2.FriendsWS2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FriendsWS2</servlet-name>
+    <url-pattern>/FriendsWS2</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>

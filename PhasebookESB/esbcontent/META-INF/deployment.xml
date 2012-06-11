@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<jbossesb-deployment>
+ <jmsQueue>redirect_Request_esb</jmsQueue>
+ <jmsQueue>redirect_Request_esb_reply</jmsQueue>
+ <jmsQueue>bpm_demo_start_Request_gw</jmsQueue>
+ <jmsQueue>bpm_demo_start_Request_esb</jmsQueue>
+ <jmsQueue>bpm_user_Request_esb</jmsQueue>
+ <jmsQueue>bpm_user_Request_esb_reply</jmsQueue>
+ <jmsQueue>bpm_posts_Request_esb</jmsQueue>
+ <jmsQueue>bpm_posts_Request_esb_reply</jmsQueue>
+ <jmsQueue>bpm_friends_Request_esb</jmsQueue>
+ <jmsQueue>bpm_friends_Request_esb_reply</jmsQueue>
+</jbossesb-deployment>

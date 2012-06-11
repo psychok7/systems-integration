@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<jbossesb parameterReloadSecs="5"
+ xmlns="http://anonsvn.labs.jboss.com/labs/jbossesb/trunk/product/etc/schemas/xml/jbossesb-1.3.0.xsd"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://anonsvn.labs.jboss.com/labs/jbossesb/trunk/product/etc/schemas/xml/jbossesb-1.3.0.xsd http://anonsvn.jboss.org/repos/labs/labs/jbossesb/trunk/product/etc/schemas/xml/jbossesb-1.3.0.xsd">
+ <providers>
+  <!--  jms-provider connection-factory="ConnectionFactory" name="JMS">
+   <jms-bus busid="redirectEsbChannel">
+    <jms-message-filter dest-name="queue/redirect_Request_esb" dest-type="QUEUE"/>
+   </jms-bus>
+  </jms-provider -->
+  <jms-provider connection-factory="ConnectionFactory" name="JMS">
+  <jms-bus busid="loginEsbChannel">
+    <jms-message-filter dest-name="queue/login_Request_esb" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="registerEsbChannel">
+    <jms-message-filter dest-name="queue/register_Request_esb" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="insertPostEsbChannel">
+    <jms-message-filter dest-name="queue/insert_post_Request_esb" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="startGwChannel">
+    <jms-message-filter dest-name="queue/bpm_demo_start_Request_gw" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="startEsbChannel">
+    <jms-message-filter dest-name="queue/bpm_demo_start_Request_esb" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="UserEsbChannel">
+    <jms-message-filter dest-name="queue/bpm_user_Request_esb" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="PostsEsbChannel">
+    <jms-message-filter dest-name="queue/bpm_posts_Request_esb" dest-type="QUEUE"/>
+   </jms-bus>
+   <jms-bus busid="FriendsEsbChannel">
+    <jms-message-filter dest-name="queue/bpm_friends_Request_esb" dest-type="QUEUE"/>
+   </jms-bus>
+  </jms-provider>
+ </providers>
+ <services>
+  <service category="PhasebookESB_Service_Login"
+   description="PhasebookESB_Service: Use this service to invoke the service" name="login">
+   <listeners>
+    <jms-listener busidref="loginEsbChannel" name="ESB-Listener"/>
+   </listeners>
+   <actions>
+    <action class="data.MyListenerAction" name="loginaction" process="redirect_login"/>
+   </actions>
+  </service>
+  <service category="PhasebookESB_Service_Register"
+   description="PhasebookESB_Service: Use this service to invoke the service" name="register">
+   <listeners>
+    <jms-listener busidref="registerEsbChannel" name="ESB-Listener"/>
+   </listeners>
+   <actions>
+    <action class="data.MyListenerAction" name="registeraction" process="redirect_register"/>
+   </actions>
+  </service>
+  <service category="PhasebookESB_Service_ListPost"
+   description="PhasebookESB_Service: Use this service to invoke the service" name="listpost">
+   <listeners>
+    <jms-listener busidref="PostsEsbChannel" name="ESB-Listener"/>
+   </listeners>
+   <actions>
+    <action class="data.MyListenerAction" name="postaction" process="list_post"/>
+   </actions>
+  </service>
+  <service category="PhasebookESB_Service_GetUser"
+   description="PhasebookESB_Service: Use this service to invoke the service" name="getUser">
+   <listeners>
+    <jms-listener busidref="UserEsbChannel" name="ESB-Listener"/>
+   </listeners>
+   <actions>
+    <action class="data.MyListenerAction" name="useraction" process="getUser"/>
+   </actions>
+  </service>
+  <service category="PhasebookESB_Service_GetFriends"
+   description="PhasebookESB_Service: Use this service to invoke the service" name="getFriends">
+   <listeners>
+    <jms-listener busidref="FriendsEsbChannel" name="ESB-Listener"/>
+   </listeners>
+   <actions>
+    <action class="data.MyListenerAction" name="useraction" process="getFriendsByUserId"/>
+   </actions>
+  </service>
+  <service category="PhasebookESB_Service_Post"
+   description="PhasebookESB_Service: Use this service to invoke the service" name="post">
+   <listeners>
+    <jms-listener busidref="insertPostEsbChannel" name="ESB-Listener"/>
+   </listeners>
+   <actions>
+    <action class="data.MyListenerAction" name="postaction" process="redirect_post"/>
+   </actions>
+  </service>
+  <!--  Services do jBPM -->
+  <service category="My_Demo_Service"
+   description="BPM Demo Orchestration: Use this service to start a process instance" name="Start">
+   <listeners>
+    <jms-listener busidref="startGwChannel" is-gateway="true" name="JMS-Gateway"/>
+    <jms-listener busidref="startEsbChannel" name="ESB-Listener"/>
+   </listeners>
+   <actions mep="OneWay">
+    <action class="action.InitializeListenerAction" name="init" process="init"/>
+    <action class="org.jboss.soa.esb.services.jbpm.actions.BpmProcessor" name="simple">
+     <property name="command" value="StartProcessInstanceCommand"/>
+     <property name="process-definition-name" value="simple"/>
+     <property name="esbToBpmVars">
+      <mapping bpm="myname" esb="userId"/>
+      <mapping bpm="theBody" esb="BODY_CONTENT"/>
+     </property>
+    </action>
+   </actions>
+  </service>
+  <!--  service category="My_Demo_Service"
+   description="BPM Demo Orchestration: Use this service to invoke the hello" name="Hello">
+   <listeners>
+    <jms-listener busidref="HelloEsbChannel" name="ESB-Listener"/>
+   </listeners>
+   <actions>
+    <action class="data.MyListenerAction" name="helloaction" process="hello"/>
+   </actions>
+  </service -->
+ </services>
+</jbossesb>

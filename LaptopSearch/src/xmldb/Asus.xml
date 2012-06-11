@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista marca="Asus">
+	<modelo nome="Asus Eee PC X101H (Preto)">
+		<ecra>10.1</ecra>
+		<processador>Intel Atom N570</processador>
+		<frequenciaprocessador unidade="GHz">1.66</frequenciaprocessador>
+		<memoriaram unidade="GiB">1</memoriaram>
+		<disco unidade="GiB">320</disco>
+		<peso unidade="Kg">1</peso>
+		<autonomia unidade="horas">5</autonomia>
+		<preco>259</preco>
+	</modelo>
+	<modelo nome="Asus Eee PC 1011PX-BLK121S (Preto)">
+		<ecra>10.1</ecra>
+		<processador>Intel Atom N570 Dual Core</processador>
+		<frequenciaprocessador unidade="GHz">1.66</frequenciaprocessador>
+		<memoriaram unidade="GiB">1</memoriaram>
+		<disco unidade="GiB">320</disco>
+		<peso unidade="Kg">1.25</peso>
+		<autonomia unidade="horas">11</autonomia>
+		<preco>279</preco>
+	</modelo>
+	<modelo nome="Asus Eee PC 1011PX-WHI083S (Branco)">
+		<ecra>10.1</ecra>
+		<processador>Intel Atom N570 Dual Core</processador>
+		<frequenciaprocessador unidade="GHz">1.66</frequenciaprocessador>
+		<memoriaram unidade="GiB">1</memoriaram>
+		<disco unidade="GiB">320</disco>
+		<peso unidade="Kg">1.25</peso>
+		<autonomia unidade="horas">11</autonomia>
+		<preco>279</preco>
+	</modelo>
+	<modelo nome="Asus K53SV-SX045V">
+		<ecra>15.6</ecra>
+		<processador>Intel Core i5-2410M Dual Core (Sandy Bridge)</processador>
+		<frequenciaprocessador unidade="GHz">2.3</frequenciaprocessador>
+		<memoriaram unidade="GiB">4</memoriaram>
+		<disco unidade="GiB">500</disco>
+		<peso unidade="Kg">2.6</peso>
+		<autonomia unidade="horas">N/A</autonomia>
+		<preco>599</preco>
+	</modelo>
+	<modelo nome="Asus K53SC-SX441V">
+		<ecra>15.6</ecra>
+		<processador>Intel Core i5-2430M Dual Core (Sandy Bridge)</processador>
+		<frequenciaprocessador unidade="GHz">2.3</frequenciaprocessador>
+		<memoriaram unidade="GiB">4</memoriaram>
+		<disco unidade="GiB">500</disco>
+		<peso unidade="Kg">2.6</peso>
+		<autonomia unidade="horas">N/A</autonomia>
+		<preco>599</preco>
+	</modelo>
+</lista>
+
+	
